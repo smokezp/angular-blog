@@ -1,0 +1,13 @@
+<div class="links">
+    <div>
+        <a href="#">MAIN</a>
+        <a href="#/posts">POSTS</a>
+    </div>
+    <div ng-if="check()">
+        <a href="#/add-post">ADD</a>
+        <a href="#/logout">LOGOUT</a>
+    </div>
+    <div ng-if="!check()">
+        <a href="#/login">LOGIN</a>
+    </div>
+</div>

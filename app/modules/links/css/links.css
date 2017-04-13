@@ -1,0 +1,10 @@
+
+.links {
+    text-align: center;
+    white-space: nowrap;
+
+}
+
+.links div {
+    display: inline-block;
+}
