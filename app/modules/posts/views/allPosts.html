@@ -45,7 +45,6 @@
 <!--</div>-->
 <!--</div>-->
 
-
 <table class="table" border="1">
     <thead>
     <tr>
@@ -70,6 +69,7 @@
 
     </thead>
     <tbody ng-repeat="post in data">
+
     <tr>
         <td>
             {{ post.text }}
@@ -78,7 +78,6 @@
             {{ post.date | date }}
         </td>
         <td>
-
             {{ post.author }}
         </td>
         <td ng-if="check()">

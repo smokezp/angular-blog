@@ -1,5 +1,5 @@
 <div class="edit">
-    <textarea rows="10" cols="45" id="textarea" ng-model="editPost.text">{{ data.text }}</textarea>
+    <textarea rows="10" cols="45" id="textarea" ng-model="editPost.text" ng-init="editPost.text = data.text"></textarea>
     <div class="button">
         <button ng-click="update(data,editPost.text)">SAVE</button>
     </div>

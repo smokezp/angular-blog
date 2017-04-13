@@ -6,7 +6,6 @@ app.directive('allPosts', function ($location, $cookieStore) {
         },
         templateUrl: 'modules/posts/views/allPosts.html',
         link: function (scope, elem, attrs) {
-
             scope.delete = function (array, id) {
                 array.splice(id, 1);
             };
@@ -19,6 +18,5 @@ app.directive('allPosts', function ($location, $cookieStore) {
                 return userLogin1;
             };
         }
-
     };
 });

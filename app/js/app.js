@@ -3,8 +3,14 @@ var app = angular.module("myApp", ['ngRoute', 'ngCookies']);
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/posts', {
+            resolve: {
+                post: ['Post', function (Post) {
+                    // console.log(post);
+                    return Post.all();
+                }]
+            },
             controller: "PostController",
-            templateUrl: "/modules/posts/views/posts.html"
+            template: '<all-posts data="post"></all-posts>'
         })
         .when('/logout', {
             resolve: {
@@ -30,11 +36,17 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/add-post', {
             resolve: {
+
+
+
                 "check": function ($location, $cookieStore) {
                     if (!checkUser($location, $cookieStore, "/add-post")) {
                         alert("Please login");
                     }
-                }
+                },
+                post: ['Post', function (Post) {
+                    return Post.all();
+                }]
             },
             //controller: "",
             template: '<add-post></add-post>'
@@ -48,7 +60,7 @@ app.config(['$routeProvider', function ($routeProvider) {
                     return Post.findById($route.current.params.id);
                 }]
             },
-            templateUrl: '/modules/posts/views/edit.html',
+            template: '<edit-post data="post"></edit-post>',
             controller: 'PostController'
         })
         .otherwise({

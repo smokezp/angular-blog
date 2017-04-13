@@ -1,4 +1,4 @@
-app.factory('Post', ['$http', '$q', function ($http, $q) {
+app.factory('Post', ['$http', '$q', '$route', function ($http, $q,$route) {
     return {
         all: function () {
             var defer = $q.defer();

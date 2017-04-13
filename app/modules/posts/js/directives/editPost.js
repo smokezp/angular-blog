@@ -1,4 +1,4 @@
-app.directive('editPost', function ($location, $cookieStore) {
+app.directive('editPost', function ($location, $cookieStore, Post) {
     return {
 
         restrict: 'E',
@@ -8,15 +8,24 @@ app.directive('editPost', function ($location, $cookieStore) {
         templateUrl: 'modules/posts/views/editPost.html',
         link: function (scope, elem, attrs) {
 
-            scope.update = function (data, textnow) {
-                var dataold = data.text;
+            //var el = document.getElementById('textarea');
+            // console.log(scope.post);
+
+
+            // el.value = scope.post.text;
+            //     scope.editPost={
+            //         text: data.text
+            //     };
+
+            scope.update = function (data, textNow) {
+                var dataOld = data.text;
                 var id = data.id;
 
                 var text;
-                if (textnow) {
-                    text = textnow;
+                if (textNow) {
+                    text = textNow;
                 } else {
-                    text = dataold;
+                    text = dataOld;
                 }
                 var author = $cookieStore.get('user');
 
@@ -25,19 +34,22 @@ app.directive('editPost', function ($location, $cookieStore) {
                 var day = dateObj.getUTCDate();
                 var year = dateObj.getUTCFullYear();
 
-                newdate = day + " " + month + " " + year;
+                var newDate = day + " " + month + " " + year;
 
                 var arr = {
                     'id': id,
                     'author': author,
                     'text': text,
-                    'date': newdate
+                    'date': newDate
                 };
 
-                posts.success(function (data) {
+                Post.all().then(function (data) {
                     data.splice(id, 1, arr);
+
+                    console.log(data);
+                    $location.path("/posts");
                 });
-                $location.path("/posts");
+
 
             };
         }
