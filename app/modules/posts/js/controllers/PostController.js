@@ -1,5 +1,4 @@
-app.controller('PostController', ['$scope', 'post', '$location', function ($scope, post, $location) {
+app.controller('PostController', ['$scope', 'post', '$location', function ($scope, post) {
     $scope.post = post;
-    //console.log(post);
 
 }]);

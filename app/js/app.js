@@ -5,7 +5,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when('/posts', {
             resolve: {
                 post: ['Post', function (Post) {
-                    // console.log(post);
                     return Post.all();
                 }]
             },
@@ -36,9 +35,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/add-post', {
             resolve: {
-
-
-
                 "check": function ($location, $cookieStore) {
                     if (!checkUser($location, $cookieStore, "/add-post")) {
                         alert("Please login");

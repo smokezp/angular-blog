@@ -17,8 +17,10 @@ app.directive('addPost', function ($location, $cookieStore, Post) {
                 var year = dateObj.getUTCFullYear();
 
                 var newDate = day + " " + month + " " + year;
+/*
                 Post.all().then(function (data) {
-                    console.log(data);
+                    //var objData =data;
+                    // console.log(data);
                     var last = data[data.length - 1];
                     var id = last.id + 1;
 
@@ -29,11 +31,25 @@ app.directive('addPost', function ($location, $cookieStore, Post) {
                         'date': newDate
 
                     };
+
+
                    // console.log(arr);
-                    data.push(arr);
-                   // console.log(data);
+
+                    //data.push(arr);
+                    //scope.post2=data;
+                    //objData.push(arr);
+                    //console.log(scope.post2);
                     $location.path("/posts");
                 });
+*/
+                var arr = {
+                    'author': author,
+                    'text': text,
+                    'date': newDate
+
+                };
+                Post.add(arr);
+                $location.path("/posts");
             };
 
         }

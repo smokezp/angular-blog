@@ -46,7 +46,7 @@ app.directive('editPost', function ($location, $cookieStore, Post) {
                 Post.all().then(function (data) {
                     data.splice(id, 1, arr);
 
-                    console.log(data);
+                    //console.log(data);
                     $location.path("/posts");
                 });
 
