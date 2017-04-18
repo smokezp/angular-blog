@@ -1,3 +1,5 @@
-app.controller('PostController', ['$scope', 'post', '$location', function ($scope, post) {
-    $scope.post = post;
+app.controller('PostController', ['$scope', 'post', function ($scope, post) {
+    //$scope.post = post;
+    $scope.post = "dsfsdf";
+
 }]);

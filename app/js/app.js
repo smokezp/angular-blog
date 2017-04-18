@@ -78,3 +78,4 @@ function checkUser($location, $cookieStore, redirect) {
     }
     return userLogin;
 }
+

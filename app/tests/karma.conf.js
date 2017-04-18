@@ -15,6 +15,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+        '../libs/angular/angular.js',
+        '../libs/angular-mocks/angular-mocks.js',
+        '../js/app.js',
+        '../*',
+        '../modules/posts/js/controllers/PostController.js',
+        'unit/*.js'
+
     ],
 
 
@@ -36,7 +43,8 @@ module.exports = function(config) {
 
 
     // web server port
-    port: 9876,
+   // port: 8000,
+      port: 9876,
 
 
     // enable / disable colors in the output (reporters and logs)
@@ -56,6 +64,7 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['PhantomJS'],
 
+    plugins : ['karma-jasmine', 'karma-phantomjs-launcher'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -64,5 +73,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
-}
+  });
+};
