@@ -26,10 +26,6 @@ app.factory('User', ['$http','$q', function($http, $q) {
             return defer.promise;
 
         }
-
-
     }
-
-
 }]);
 

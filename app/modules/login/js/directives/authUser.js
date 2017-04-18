@@ -24,7 +24,6 @@ app.directive('authUser', function ($cookieStore, User) {
 
                 }
             }
-
         }
 
 

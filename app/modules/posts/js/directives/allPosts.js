@@ -14,8 +14,7 @@ app.directive('allPosts', function ($location, $cookieStore) {
             };
 
             scope.check = function () {
-                var userLogin1 = $cookieStore.get('user');
-                return userLogin1;
+                return $cookieStore.get('user');
             };
         }
     };

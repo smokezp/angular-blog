@@ -11,8 +11,6 @@ app.factory('Post', ['$http', '$q', '$route', function ($http, $q, $route) {
     }
 
     return {
-
-
         add: function (post) {
             // console.log(Posts);
             var defer = $q.defer();
