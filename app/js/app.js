@@ -30,7 +30,7 @@ app.config(['$routeProvider', function ($routeProvider) {
                     checkUser($location, $cookieStore, "/");
                 }
             },
-            controller: "LoginController",
+            //controller: "LoginController",
             template: '<auth-user></auth-user>'
 
         })
