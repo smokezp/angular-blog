@@ -1,4 +1,4 @@
-app.directive('authUser', function (users, $cookieStore) {
+app.directive('authUser', function ($cookieStore, User) {
     return {
         restrict: 'E',
         scope: {
@@ -8,7 +8,9 @@ app.directive('authUser', function (users, $cookieStore) {
         link: function (scope, elem) {
             scope.authLogin = function () {
                 if (scope.user.login && scope.user.password) {
-                    users.success(function (data) {
+                    //console.log(user);
+                    User.all().then(function (data) {
+                        //console.log(data);
                         if (data[0].login == scope.user.login && data[0].password == scope.user.password) {
                             $cookieStore.put('user', scope.user.login);
                             alert("welcome!!");
@@ -28,3 +30,5 @@ app.directive('authUser', function (users, $cookieStore) {
 
     };
 });
+
+

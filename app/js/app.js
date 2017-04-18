@@ -25,12 +25,13 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/login', {
             resolve: {
+
                 "check": function ($location, $cookieStore) {
                     checkUser($location, $cookieStore, "/");
                 }
             },
-            //controller: "AuthController",
-            templateUrl: "/modules/login/views/login.html"
+            controller: "LoginController",
+            template: '<auth-user></auth-user>'
 
         })
         .when('/add-post', {
