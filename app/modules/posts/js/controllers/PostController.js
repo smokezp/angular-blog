@@ -1,5 +1,3 @@
-app.controller('PostController', ['$scope', 'post', function ($scope, post) {
-    //$scope.post = post;
-    $scope.post = "dsfsdf";
-
+angular.module('myApp').controller('PostController', ['$scope', 'post', function ($scope, post) {
+    $scope.post = post;
 }]);

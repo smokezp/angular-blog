@@ -1,4 +1,4 @@
-app.directive('mainLinks', function ($location, $cookieStore) {
+angular.module('myApp').directive('mainLinks', function ($location, $cookieStore) {
     return {
         restrict: 'E',
         scope: {
@@ -8,10 +8,8 @@ app.directive('mainLinks', function ($location, $cookieStore) {
         link: function (scope, elem, attrs) {
 
             scope.check = function () {
-                var userLogin1 = $cookieStore.get('user');
-                return userLogin1;
+                return $cookieStore.get('user');
             };
         }
-
     };
 });

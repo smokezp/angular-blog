@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Tue Apr 18 2017 11:31:57 GMT+0300 (EEST)
+// Generated on Tue Apr 18 2017 14:55:10 GMT+0300 (EEST)
 
 module.exports = function(config) {
   config.set({
@@ -17,18 +17,25 @@ module.exports = function(config) {
     files: [
         '../libs/angular/angular.js',
         '../libs/angular-mocks/angular-mocks.js',
+        '../libs/angular-animate/angular-animate.js',
+        '../libs/angular-cookies/angular-cookies.js',
+        '../libs/angular-resource/angular-resource.js',
+        '../libs/angular-route/angular-route.js',
+
+        //'../modules/posts/js/controllers/PostController.js',
+        //'../index.html',
         '../js/app.js',
-        '../*',
-        '../modules/posts/js/controllers/PostController.js',
+        '../modules/**/*.js',
+
+        // '../modules/links/js/directives/*.js',
+        // '../modules/login/js/directives/*.js',
+        // '../modules/posts/js/controllers/*.js',
         'unit/*.js'
-
     ],
-
 
     // list of files to exclude
     exclude: [
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -43,8 +50,7 @@ module.exports = function(config) {
 
 
     // web server port
-   // port: 8000,
-      port: 9876,
+    port: 9876,
 
 
     // enable / disable colors in the output (reporters and logs)
@@ -62,9 +68,9 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+   // browsers: ['PhantomJS'],
+      browsers: ['Chrome'],
 
-    plugins : ['karma-jasmine', 'karma-phantomjs-launcher'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -73,5 +79,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  });
-};
+  })
+}

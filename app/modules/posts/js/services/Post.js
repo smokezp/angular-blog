@@ -1,4 +1,4 @@
-app.factory('Post', ['$http', '$q', '$route', function ($http, $q, $route) {
+angular.module('myApp').factory('Post', ['$http', '$q', '$route', function ($http, $q, $route) {
 
     var Posts = define();
 
@@ -33,7 +33,6 @@ app.factory('Post', ['$http', '$q', '$route', function ($http, $q, $route) {
         },
         all: function () {
             return Posts;
-
             // var defer = $q.defer();
             // $http.get('/posts.json').then(function (req) {
             //     defer.resolve(req.data);

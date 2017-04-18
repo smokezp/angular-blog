@@ -1,4 +1,4 @@
-app.directive('addPost', function ($location, $cookieStore, Post) {
+angular.module('myApp').directive('addPost', function ($location, $cookieStore, Post) {
     return {
         restrict: 'E',
         scope: {

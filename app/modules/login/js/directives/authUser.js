@@ -1,4 +1,4 @@
-app.directive('authUser', function ($cookieStore, User) {
+angular.module('myApp').directive('authUser', function ($cookieStore, User) {
     return {
         restrict: 'E',
         scope: {

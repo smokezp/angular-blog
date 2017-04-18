@@ -1,4 +1,4 @@
-app.directive('editPost', function ($location, $cookieStore, Post) {
+angular.module('myApp').directive('editPost', function ($location, $cookieStore, Post) {
     return {
 
         restrict: 'E',

@@ -1,4 +1,4 @@
-app.factory('User', ['$http', '$q', function ($http, $q) {
+angular.module('myApp').factory('User', ['$http', '$q', function ($http, $q) {
 
     return {
 
