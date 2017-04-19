@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">8.7% </span>
+        <span class="strong">9.52% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/23</span>
+        <span class='fraction'>2/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/9</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">8.7% </span>
+        <span class="strong">9.52% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/23</span>
+        <span class='fraction'>2/21</span>
       </div>
     </div>
   </div>
@@ -86,39 +86,37 @@
 41
 42
 43
-44
-45</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+44</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -138,7 +136,7 @@
 <span class="fstat-no" title="function not covered" >    function define() {</span>
 <span class="cstat-no" title="statement not covered" >        var defer = $q.defer();</span>
 <span class="cstat-no" title="statement not covered" >        $http.get('/posts.json').then(<span class="fstat-no" title="function not covered" >function (req) {</span></span>
-<span class="cstat-no" title="statement not covered" >            console.log(req);</span>
+            //console.log(req);
 <span class="cstat-no" title="statement not covered" >            defer.resolve(req.data);</span>
         }, defer.reject);
 <span class="cstat-no" title="statement not covered" >        return defer.promise;</span>
@@ -157,12 +155,11 @@
         },
         all: <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >            return Posts;</span>
-&nbsp;
         },
         findById: <span class="fstat-no" title="function not covered" >function () {</span>
 <span class="cstat-no" title="statement not covered" >            var defer = $q.defer();</span>
 <span class="cstat-no" title="statement not covered" >            Posts.then(<span class="fstat-no" title="function not covered" >function (req) {</span></span>
-<span class="cstat-no" title="statement not covered" >                console.log(req);</span>
+                //console.log(req);
 <span class="cstat-no" title="statement not covered" >                var post = req.find(<span class="fstat-no" title="function not covered" >function (elem) {</span></span>
 <span class="cstat-no" title="statement not covered" >                    return elem.id === +$route.current.params.id;</span>
                 });
@@ -181,7 +178,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 11:40:09 GMT+0300 (EEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 16:48:04 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

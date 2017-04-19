@@ -5,7 +5,7 @@ angular.module('myApp').factory('Post', ['$http', '$q', '$route', function ($htt
     function define() {
         var defer = $q.defer();
         $http.get('/posts.json').then(function (req) {
-            console.log(req);
+            //console.log(req);
             defer.resolve(req.data);
         }, defer.reject);
         return defer.promise;
@@ -24,12 +24,11 @@ angular.module('myApp').factory('Post', ['$http', '$q', '$route', function ($htt
         },
         all: function () {
             return Posts;
-
         },
         findById: function () {
             var defer = $q.defer();
             Posts.then(function (req) {
-                console.log(req);
+                //console.log(req);
                 var post = req.find(function (elem) {
                     return elem.id === +$route.current.params.id;
                 });

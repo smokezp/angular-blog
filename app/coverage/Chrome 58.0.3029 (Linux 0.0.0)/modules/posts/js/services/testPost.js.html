@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/6</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/6</span>
+        <span class='fraction'>0/0</span>
       </div>
     </div>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -117,41 +117,7 @@
 72
 73
 74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+75</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,40 +156,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -261,24 +193,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// describe('Testing angularjs', function () {
 //
-//     beforeEach(module('myApp'));
+//     beforeEach(module('myApp', ['ngMock']));
 //
 //     var userService, httpBackend;
 //
 //     beforeEach(function () {
-//         angular.module('myApp').service('Post', ['_userService_', '$httpBackend', function (_userService_, $httpBackend) {
+//         angular.module('myApp', ['ngMock']).service('Post',  function (_userService_, $httpBackend) {
 //
 //             userService = _userService_;
 //             httpBackend = $httpBackend;
-//             console.log(httpBackend);
-//             console.log(21323232);
-//         }]);
+//         });
 //     });
 //
-//     // beforeEach(inject(function (_userService_, $httpBackend) {
-//     //     userService = _userService_;
-//     //     httpBackend = $httpBackend;
-//     // }));
+//
+//
+//
 //
 //     describe('Testing service post', function () {
 //         it('http get data from json file', function () {
@@ -322,58 +251,27 @@
 // });
 &nbsp;
 &nbsp;
-&nbsp;
-describe('Testing angularjs', function () {
-    var $httpBackend, authRequestHandler;
-        beforeEach(module('myApp'));
-&nbsp;
-    beforeEach(inject(<span class="fstat-no" title="function not covered" >function ($injector) {</span>
-        // Set up the mock http service responses
-<span class="cstat-no" title="statement not covered" >        $httpBackend = $injector.get('$httpBackend');</span>
-        // backend definition common for all tests
-<span class="cstat-no" title="statement not covered" >        authRequestHandler = $httpBackend.when('GET', 'posts.json')</span>
-            .respond([
-                {
-                    "id": 0,
-                    "text": "dfgdfgdfgfgdfgdfghjgjghjghjghj",
-                    "date": "Apr 8, 2014",
-                    "author": "alexey"
-&nbsp;
-                },
-                {
-                    "id": 1,
-                    "text": "dhgfjhh vbnbmbnmbnm",
-                    "date": "Apr 8, 2014",
-                    "author": "alexeytytyt"
-&nbsp;
-                },
-                {
-                    "id": 2,
-                    "text": "KLKKMk gbhghhbhbhbhb",
-                    "date": "Apr 9, 2014",
-                    "author": "alexeyvbcccvb"
-&nbsp;
-                },
-                {
-                    "id": 3,
-                    "text": "dfssadczxczxc",
-                    "date": "Apr 8, 2014",
-                    "author": "alexeyQweewewe"
-&nbsp;
-                }
-            ]);
+//------------------------------------------------------------------
 &nbsp;
 &nbsp;
-&nbsp;
-    }));
-&nbsp;
-});</pre></td></tr>
+// describe('posts data', function () {
+//
+//     describe('get all posts data', function () {
+//
+//         it('http get data from json file', inject(function (postData) {
+//             postData.all();
+//
+//             expect();
+//
+//         }));
+//     });
+// });</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 11:40:09 GMT+0300 (EEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 16:48:04 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

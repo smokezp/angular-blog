@@ -15,17 +15,17 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            '../libs/angular/angular.js',
-            '../libs/angular-mocks/angular-mocks.js',
-            '../libs/angular-animate/angular-animate.js',
-            '../libs/angular-cookies/angular-cookies.js',
-            '../libs/angular-resource/angular-resource.js',
-            '../libs/angular-route/angular-route.js',
+            'libs/angular/angular.js',
+            'libs/angular-mocks/angular-mocks.js',
+            'libs/angular-animate/angular-animate.js',
+            'libs/angular-cookies/angular-cookies.js',
+            'libs/angular-resource/angular-resource.js',
+            'libs/angular-route/angular-route.js',
 
             //'../modules/posts/js/controllers/PostController.js',
             //'../index.html',
-            '../js/app.js',
-            '../modules/**/*.js'
+            'js/app.js',
+            'modules/**/*.js'
 
             // '../modules/links/js/directives/*.js',
             // '../modules/login/js/directives/*.js',
@@ -43,8 +43,8 @@ module.exports = function (config) {
             // source files, that you wanna generate coverage for
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
-            '../js/app.js': ['coverage'],
-            '../modules/**/*.js': ['coverage']
+            'js/app.js': ['coverage'],
+            'modules/**/*.js': ['coverage']
         },
 
         // test results reporter to use

@@ -63,7 +63,7 @@ angular
             .otherwise({
                 redirectTo: '/'
             });
-    }])
+    }]);
 
 function checkUser($location, $cookieStore, redirect) {
     var userLogin = $cookieStore.get('user');
