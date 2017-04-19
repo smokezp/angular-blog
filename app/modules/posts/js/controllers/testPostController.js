@@ -17,7 +17,6 @@ describe('Testing angularjs', function () {
                 ctrl = $controller('PostController', {$scope: scope});
             });
             expect(scope.post).toBeDefined();
-            console.log(scope.post);
             expect(scope.post.foo).toBe('bar');
         });
     });
