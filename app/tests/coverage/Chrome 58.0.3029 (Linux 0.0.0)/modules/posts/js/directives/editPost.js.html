@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for modules/posts/js/directives/editPost.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">modules/posts/js/directives/</a> editPost.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.26% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.26% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">angular.module('myApp').directive('editPost', <span class="fstat-no" title="function not covered" >function ($location, $cookieStore, Post) {</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+&nbsp;
+        restrict: 'E',
+        scope: {
+            data: '='
+        },
+        templateUrl: 'modules/posts/views/editPost.html',
+        link: <span class="fstat-no" title="function not covered" >function (scope, elem, attrs) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            scope.update = <span class="fstat-no" title="function not covered" >function (data, textNow) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var dataOld = data.text;</span>
+<span class="cstat-no" title="statement not covered" >                var id = data.id;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var text;</span>
+<span class="cstat-no" title="statement not covered" >                if (textNow) {</span>
+<span class="cstat-no" title="statement not covered" >                    text = textNow;</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    text = dataOld;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                var author = $cookieStore.get('user');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var dateObj = new Date(), locale = "en-us";</span>
+<span class="cstat-no" title="statement not covered" >                var month = dateObj.toLocaleString(locale, {month: "short"});</span>
+<span class="cstat-no" title="statement not covered" >                var day = dateObj.getUTCDate();</span>
+<span class="cstat-no" title="statement not covered" >                var year = dateObj.getUTCFullYear();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var newDate = day + " " + month + " " + year;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var arr = {</span>
+                    'id': id,
+                    'author': author,
+                    'text': text,
+                    'date': newDate
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                Post.all().then(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    data.splice(id, 1, arr);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    $location.path("/posts");</span>
+                });
+&nbsp;
+&nbsp;
+            };
+        }
+&nbsp;
+    };
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 19 2017 09:41:33 GMT+0300 (EEST)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
