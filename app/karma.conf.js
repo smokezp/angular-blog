@@ -21,12 +21,15 @@ module.exports = function (config) {
             'libs/angular-cookies/angular-cookies.js',
             'libs/angular-resource/angular-resource.js',
             'libs/angular-route/angular-route.js',
-
+            // 'modules/posts/views/allPosts.html',
             //'../modules/posts/js/controllers/PostController.js',
             //'../index.html',
-            'js/app.js',
-            'modules/**/*.js'
 
+            'js/app.js',
+            'modules/**/*.js',
+            'modules/**/*.html'
+
+            //, "modules/posts/views/allPosts.html"
             // '../modules/links/js/directives/*.js',
             // '../modules/login/js/directives/*.js',
             // '../modules/posts/js/controllers/*.js',
@@ -44,8 +47,24 @@ module.exports = function (config) {
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
             'js/app.js': ['coverage'],
-            'modules/**/*.js': ['coverage']
+            'modules/**/*.js': ['coverage'],
+            "modules/**/*.html": ["ng-html2js"]
+            //, "app/modules/posts/views/allPosts.html": ["ng-html2js"]
         },
+
+
+        ngHtml2JsPreprocessor: {
+            //stripPrefix: 'modules/',
+            moduleName: 'templates'
+        },
+
+        plugins: [
+            'karma-phantomjs-launcher',
+            'karma-jasmine',
+            'karma-coverage',
+            'karma-ng-html2js-preprocessor',
+            'karma-chrome-launcher'
+        ],
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
@@ -72,7 +91,7 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        // browsers: ['PhantomJS'],
+        //  browsers: ['PhantomJS'],
         browsers: ['Chrome'],
 
 
