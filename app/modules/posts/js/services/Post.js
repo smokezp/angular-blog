@@ -1,18 +1,23 @@
-angular.module('myApp').factory('Post', ['$http', '$q', '$route', function ($http, $q, $route) {
+angular.module('myApp').factory('Post', ['$http', '$q',  function ($http, $q) {
 
     var Posts = define();
-
+   // console.log(Posts);
+//console.log(Posts);
     function define() {
         var defer = $q.defer();
+
         $http.get('/posts.json').then(function (req) {
-            //console.log(req);
+           // console.log("dfdfdfdf");
             defer.resolve(req.data);
         }, defer.reject);
+        //console.log(defer.promise);
         return defer.promise;
+
     }
 
     return {
         add: function (post) {
+           // console.log(post);
             var defer = $q.defer();
             Posts.then(function (req) {
                 post['id'] = req.length;
@@ -25,12 +30,16 @@ angular.module('myApp').factory('Post', ['$http', '$q', '$route', function ($htt
         all: function () {
             return Posts;
         },
-        findById: function () {
+        findById: function (id) {
             var defer = $q.defer();
             Posts.then(function (req) {
+
                 //console.log(req);
                 var post = req.find(function (elem) {
-                    return elem.id === +$route.current.params.id;
+                    //console.log(elem.id);
+                    //console.log(id);
+                    //console.log($route.current.params.id);
+                    return elem.id === +id;
                 });
                 defer.resolve(post);
             }, defer.reject);

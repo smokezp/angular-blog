@@ -27,7 +27,12 @@ module.exports = function (config) {
 
             'js/app.js',
             'modules/**/*.js',
-            'modules/**/*.html'
+            'modules/**/*.html',
+
+            //'*.json',
+
+            {pattern: '*.json', watched: true, served: true, included: false}
+
 
             //, "modules/posts/views/allPosts.html"
             // '../modules/links/js/directives/*.js',
@@ -49,6 +54,7 @@ module.exports = function (config) {
             'js/app.js': ['coverage'],
             'modules/**/*.js': ['coverage'],
             "modules/**/*.html": ["ng-html2js"]
+            //'*.json': ['ng-html2js']
             //, "app/modules/posts/views/allPosts.html": ["ng-html2js"]
         },
 

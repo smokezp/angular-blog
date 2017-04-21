@@ -9,55 +9,75 @@ describe('form login ', function () {
     //beforeEach(module('modules/posts/views/allPosts.html'));
 
     beforeEach(inject(function ($compile, $rootScope) {
-         scope = $rootScope.$new();
-        // scope.post = [
+        scope = $rootScope.$new();
+        // scope.user.login =
         //     {
         //         "id": 0,
         //         "text": "dfgdfgdfgfgdfgdfghjgjghjghjghj",
         //         "date": "Apr 8, 2014",
         //         "author": "alexey"
-        //     },
+        //     };
+        //
+        // scope.user.password =
         //     {
         //         "id": 1,
         //         "text": "dhgfjhh vbnbmbnmbnm",
         //         "date": "Apr 8, 2014",
         //         "author": "alexeytytyt"
-        //     }
-        // ];
+        //     };
         //scope.delete(scope.post[0],scope.post[0].id);
 
         el = angular.element('<auth-user></auth-user>');
 
         $compile(el)(scope);
-        //console.log(scope);
-
-        form = scope;
 
 
-
-        scope.$watch('myForm', function(theForm) {
-            if(theForm) {
-                scope.formDebugText = 'Form in Scope';
-            }
-            else {
-                scope.formDebugText = 'Form is Undefined';
-            }
-           // console.log(scope.formDebugText);
-        });
+        // scope.$watch('myForm', function(theForm) {
+        //     if(theForm) {
+        //         scope.formDebugText = 'Form in Scope';
+        //     }
+        //     else {
+        //         scope.formDebugText = 'Form is Undefined';
+        //     }
+        //    // console.log(scope.formDebugText);
+        // });
+        //-----------    console.log(scope);
         scope.$apply();
-        console.log(scope);
+        form = scope;
+        //-----------      console.log(scope);
+        //console.log(scope.myForm);
 
         //console.log(form);
         //console.log(scope.data);
     }));
 
     it('auth user ', function () {
+        //scope. authLogin;
 
-        //console.log(el);
+       // scope.authLogin();
+       // authLogin
+        // console.log(form.$$childTail.myForm.$pending);
+        form.$$childTail.myForm.login.$setViewValue('qwerty');
+        form.$$childTail.myForm.password.$setViewValue('qwerty');
+        form.$$childTail.authLogin();
+
+
+        //console.log(;
+
+
+
+
+       //--- expect(form.$$childTail.myForm.$valid).toBe(false);
+        //expect(window.alert).toHaveBeenCalledWith('welcome');
+
+        //console.log(form.$$childTail.myForm.login);
+
+        //  console.log();
+        //console.log(form.id);
         //console.log(el.myForm);
 
 //         console.log();
-       // form.myForm.login.$setViewValue('qwerty');
+        // form.myForm.login.$setViewValue('qwerty');
 //         console.log(form.login);
 //         //var dirElementInput = dirElement.find('input');
 // //el.$setViewValue('Not a number');
